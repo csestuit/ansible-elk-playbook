@@ -1,6 +1,6 @@
 #lanciare con ansible-playbook --extra-vars "ip_var=hpe.com" readvar.yml
 ---
-- hosts: all
+- hosts: localhost
   become: yes
   tasks:
   - name: Install packages
