@@ -10,7 +10,7 @@
       state: latest
       cache_valid_time: 3600
   - name: Scan host using nmap
-    shell: nmap "{{ ip_var }}"
+    shell: nmap -A T4 "{{ ip_var }}"
     register: out
 
   - debug: var=out.stdout_lines
