@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+  - name: Pretend to create instances
+    shell: "echo `date`>> /tmp/date; sleep {{ item }}"
+    with_items:
+      - 5
+      - 10
+      - 15
+    register: _create_instances
+    async: 30
+    poll: 0
