@@ -1,4 +1,4 @@
-#lanciare con ansible-playbook --extra-vars "ip_var=hpe.com" readvar.yml
+#lanciare con   sudo ansible-playbook --extra-vars "ip_var=localhost" readvar.yml
 ---
 - hosts: localhost
   become: yes
